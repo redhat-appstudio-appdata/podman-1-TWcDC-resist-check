@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: contribpodman-nextfcos-podmanimage-podman-qk7z
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: contribpodman-nextfcos-podmanimage-podman-qk7z
+    app.kubernetes.io/part-of: podman-1
+  name: contribpodman-nextfcos-podmanimage-podman-qk7z
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: contribpodman-nextfcos-podmanimage-podman-qk7z
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: contribpodman-nextfcos-podmanimage-podman-qk7z
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        resources:
+          requests:
+            cpu: 10m
+            memory: 256Mi
+status: {}
